@@ -2,13 +2,13 @@
 
 import { useEffect, useId, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import type { NavItem } from "./Header";
 
 type MobileMenuProps = {
   items: NavItem[];
   discordUrl: string;
   discordLabel: string;
-  localeHref: string;
   localeLabel: string;
   localeAria: string;
   otherLocale: string;
@@ -21,7 +21,6 @@ export function MobileMenu({
   items,
   discordUrl,
   discordLabel,
-  localeHref,
   localeLabel,
   localeAria,
   otherLocale,
@@ -82,14 +81,15 @@ export function MobileMenu({
             >
               {discordLabel}
             </a>
-            <a
-              href={localeHref}
+            <Link
+              href="/"
+              locale={otherLocale}
               hrefLang={otherLocale}
               aria-label={localeAria}
               className="inline-flex h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-semibold text-ink"
             >
               {localeLabel}
-            </a>
+            </Link>
           </div>
         </nav>
       </div>

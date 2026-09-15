@@ -69,7 +69,6 @@ export async function Header() {
           items={navItems}
           discordUrl={siteConfig.discordUrl}
           discordLabel={t("common.joinDiscord")}
-          localeHref={`/${otherLocale}`}
           localeLabel={t("common.switchLocale")}
           localeAria={t("common.switchLocaleAria")}
           otherLocale={otherLocale}

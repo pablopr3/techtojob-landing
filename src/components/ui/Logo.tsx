@@ -1,4 +1,5 @@
 import Image from "next/image";
+import logo from "../../../public/logo.svg";
 
 type LogoProps = {
   className?: string;
@@ -10,12 +11,11 @@ type LogoProps = {
 export function Logo({ className, priority = false }: LogoProps) {
   return (
     <Image
-      src="/logo.svg"
+      src={logo}
       alt="TechToJob"
       width={203}
       height={30}
       priority={priority}
-      unoptimized
       className={["h-[30px] w-auto", className].filter(Boolean).join(" ")}
     />
   );

@@ -2,7 +2,7 @@
 
 Landing de [TechToJob](https://techtojob.com), la comunidad en Discord donde desarrolladores y empresas tech se conocen antes de que exista la vacante. Entrega para el Torneo #2 de la comunidad.
 
-- Español: `/es` · Inglés: `/en` (la raíz redirige a `/es`)
+- Español: `/es/` · Inglés: `/en/` (la raíz redirige según el idioma del navegador)
 - Stack: Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · next-intl
 - Sin plantillas ni kits de componentes: todos los componentes están escritos a mano en `src/components`
 
@@ -20,8 +20,17 @@ Variables de entorno (opcional): copia `.env.example` a `.env.local`.
 | Variable | Uso |
 | --- | --- |
 | `NEXT_PUBLIC_NEWSLETTER_ENDPOINT` | URL que recibe un `POST` JSON `{ email }`. Vacía mientras no exista la lista: el formulario valida el correo y muestra un aviso honesto en vez de simular un alta. |
+| `NEXT_PUBLIC_BASE_PATH` | Solo si la web cuelga de una sub-ruta (GitHub Pages de proyecto: `/techtojob-landing`). Vacío con dominio propio. |
+| `NEXT_PUBLIC_SITE_URL` | URL pública para canonical, Open Graph, sitemap y JSON-LD. Por defecto `https://techtojob.com`. |
 
-Despliegue: Vercel detecta el proyecto sin configuración. En Cloudflare Pages, usar el adaptador de Next (OpenNext) o exportar estático.
+## Despliegue
+
+El proyecto se exporta como HTML estático (`output: "export"`, carpeta `out/`), así que vale para cualquier hosting de estáticos.
+
+- **GitHub Pages**: ya incluido. El workflow `.github/workflows/deploy.yml` compila y publica en cada push a `main`. Solo hay que activar en el repo *Settings → Pages → Build and deployment → Source: GitHub Actions*. Queda en `https://<usuario>.github.io/techtojob-landing/`. Con dominio propio (techtojob.com), quitar las dos variables `NEXT_PUBLIC_*` del workflow y añadir el `CNAME`.
+- **Vercel / Cloudflare Pages**: importar el repo; detectan Next y sirven `out/` sin configurar nada.
+
+La raíz (`/`) es un `public/index.html` que redirige a `/es/` o `/en/` según el idioma del navegador, con `noindex` para que no compita con las páginas reales.
 
 ## Estructura
 

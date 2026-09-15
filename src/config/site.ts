@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "TechToJob",
-  url: "https://techtojob.com",
+  /** Public origin (plus base path, if any) used for canonical, Open Graph, sitemap and JSON-LD. */
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://techtojob.com").replace(/\/$/, ""),
   email: "contacto@techtojob.com",
   discordUrl: "https://discord.gg/h9FFgKdkRd",
   social: {
