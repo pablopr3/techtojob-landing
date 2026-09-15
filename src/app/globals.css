@@ -1,0 +1,340 @@
+@import "tailwindcss";
+
+/* Brand tokens live in @theme below; see README "Identidad y paleta". */
+@theme {
+  /*
+    Four colours, all of them a marker or the board:
+    ink       black marker  – text, drawn borders, dark board
+    brand     blue marker   – actions, links, strokes, logo
+    highlight yellow highlighter – behind key phrases, secondary button on dark
+    board     the whiteboard itself
+    Everything else is a tint of one of those four.
+  */
+  --color-ink: #1c2230;
+  --color-ink-soft: #3a4353;
+  --color-brand: #2b5cf0;
+  --color-brand-deep: #1e44c2; /* blue that passes 4.5:1 as small text on the board */
+  --color-brand-tint: #e6edff;
+  --color-highlight: #fff176;
+  --color-note: #fff4b3; /* highlight, diluted: sticky notes */
+  --color-board: #fcfbf7;
+  --color-mist: #f3f2ec;
+  --color-line: #dedbd0;
+  --color-muted: #5b6472;
+
+  --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background: var(--color-white);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  :target {
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    background: var(--color-highlight);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@utility container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1.25rem;
+
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility dot-grid {
+  background-image: radial-gradient(var(--color-line) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* ---------- Whiteboard look ---------- */
+
+/* Faint grid, like a whiteboard with a printed grid. */
+@utility board-grid {
+  background-color: var(--color-board);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-line) 70%, white) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-line) 70%, white) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: center top;
+}
+
+/* Hand-drawn box: uneven radii make a straight border feel drawn with a marker. */
+@utility sketch {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-ink);
+  border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
+}
+
+@utility sketch-soft {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-line);
+  border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
+}
+
+/* Marker highlight behind a phrase. */
+@utility marker {
+  background-image: linear-gradient(
+    100deg,
+    transparent 1%,
+    var(--color-highlight) 3%,
+    var(--color-highlight) 97%,
+    transparent 99%
+  );
+  padding-inline: 0.15em;
+  margin-inline: -0.1em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Piece of tape holding a note to the board. */
+@utility tape {
+  position: relative;
+}
+.tape::before {
+  content: "";
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  width: 6rem;
+  height: 1.5rem;
+  transform: translateX(-50%) rotate(-3deg);
+  background: color-mix(in srgb, var(--color-ink) 18%, white);
+  opacity: 0.75;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/*
+  In-view animations. The <html> element gets the "js" class from a tiny inline
+  script (see layout.tsx); without JS, or with reduced motion, everything is
+  static and fully visible, so nothing is ever hidden from crawlers.
+  InViewObserver.tsx adds "is-visible" to .reveal, .doodle and .marker.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0s);
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  /* Safety net: if hydration is slow or fails, everything shows itself after 2.5s. */
+  .js .reveal:not(.is-visible) {
+    animation: reveal-safety 0.6s ease 2.5s forwards;
+  }
+  @keyframes reveal-safety {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .js .doodle path,
+  .js .doodle circle,
+  .js .doodle line,
+  .js .doodle polyline {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 1.1s cubic-bezier(0.65, 0, 0.35, 1);
+    transition-delay: var(--doodle-delay, 0s);
+  }
+  .js .doodle.is-visible path,
+  .js .doodle.is-visible circle,
+  .js .doodle.is-visible line,
+  .js .doodle.is-visible polyline {
+    stroke-dashoffset: 0;
+  }
+
+  /* The highlighter is swiped across the phrase. */
+  .js .marker {
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+  }
+  .js .marker.is-visible {
+    background-size: 100% 100%;
+  }
+  .js .marker:not(.is-visible) {
+    animation: marker-safety 0.6s ease 2.5s forwards;
+  }
+  @keyframes marker-safety {
+    to {
+      background-size: 100% 100%;
+    }
+  }
+
+  /* Hero entrance on page load. */
+  .hero-in {
+    animation: hero-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: calc(var(--i, 0) * 0.12s);
+  }
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* Sticky notes lift when hovered. */
+  .note-lift {
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s ease;
+  }
+  .note-lift:hover {
+    transform: rotate(0deg) translateY(-6px) scale(1.02);
+    box-shadow: 10px 14px 0 0 rgba(28, 34, 48, 0.12);
+  }
+}
+
+/* ---------- HUD cursor (desktop only, see CursorFx.tsx) ---------- */
+
+.has-cursor-fx.cursor-fx-active body,
+.has-cursor-fx.cursor-fx-active a,
+.has-cursor-fx.cursor-fx-active button,
+.has-cursor-fx.cursor-fx-active label {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-line-x,
+.cursor-line-y,
+.cursor-lock,
+.cursor-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.cursor-fx-active .cursor-dot,
+.cursor-fx-active .cursor-line-x,
+.cursor-fx-active .cursor-line-y,
+.cursor-fx-active .cursor-grid {
+  opacity: 1;
+}
+
+/* Centre dot: a small ink square with a blue core, like a plotter head. */
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border: 2px solid var(--color-ink);
+  background: var(--color-brand);
+  z-index: 62;
+  will-change: transform;
+}
+.cursor-fx-locked .cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-width: 1px;
+}
+.cursor-fx-down .cursor-dot {
+  background: var(--color-ink);
+}
+
+/* Crosshair: two hairlines across the viewport, fading out when locked on a target. */
+.cursor-line-x,
+.cursor-line-y {
+  z-index: 60;
+  background: color-mix(in srgb, var(--color-brand) 35%, transparent);
+  will-change: transform;
+}
+.cursor-line-x {
+  width: 100vw;
+  height: 1px;
+}
+.cursor-line-y {
+  width: 1px;
+  height: 100vh;
+}
+.cursor-fx-locked .cursor-line-x,
+.cursor-fx-locked .cursor-line-y {
+  opacity: 0.25;
+}
+
+/* Bracket frame that snaps onto the hovered link or button. */
+.cursor-lock {
+  z-index: 61;
+  --corner: var(--color-brand);
+  background:
+    linear-gradient(var(--corner), var(--corner)) top left / 12px 2px,
+    linear-gradient(var(--corner), var(--corner)) top left / 2px 12px,
+    linear-gradient(var(--corner), var(--corner)) top right / 12px 2px,
+    linear-gradient(var(--corner), var(--corner)) top right / 2px 12px,
+    linear-gradient(var(--corner), var(--corner)) bottom left / 12px 2px,
+    linear-gradient(var(--corner), var(--corner)) bottom left / 2px 12px,
+    linear-gradient(var(--corner), var(--corner)) bottom right / 12px 2px,
+    linear-gradient(var(--corner), var(--corner)) bottom right / 2px 12px;
+  background-repeat: no-repeat;
+  transition:
+    opacity 0.15s ease,
+    transform 0.18s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.18s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cursor-fx-active.cursor-fx-locked .cursor-lock {
+  opacity: 1;
+}
+.cursor-fx-down .cursor-lock {
+  --corner: var(--color-ink);
+}
+
+/* Patch of blue grid that lights up around the pointer, behind the content. */
+.cursor-grid {
+  inset: 0;
+  z-index: -1;
+  --x: -1000px;
+  --y: -1000px;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-brand) 45%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-brand) 45%, transparent) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: center top;
+  mask-image: radial-gradient(220px circle at var(--x) var(--y), black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(220px circle at var(--x) var(--y), black 0%, transparent 70%);
+}

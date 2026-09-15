@@ -1,0 +1,399 @@
+{
+  "meta": {
+    "title": "comunidad de desarrolladores y empresas tech",
+    "titleShort": "TechToJob",
+    "description": "Comunidad en Discord donde desarrolladores y empresas tech se conocen antes de que salga la vacante. Publica tu perfil, entra a torneos y que te encuentren.",
+    "ogAlt": "TechToJob: comunidad de desarrolladores y empresas tech en español"
+  },
+  "anchors": {
+    "howItWorks": "como-funciona",
+    "talent": "talento",
+    "companies": "empresas",
+    "tournaments": "torneos",
+    "networking": "comunidad",
+    "testimonials": "opiniones",
+    "news": "noticias",
+    "newsletter": "newsletter"
+  },
+  "common": {
+    "joinDiscord": "Entrar al Discord",
+    "skipToContent": "Saltar al contenido",
+    "switchLocale": "English",
+    "switchLocaleAria": "Ver esta página en inglés",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "mainNav": "Navegación principal"
+  },
+  "nav": {
+    "howItWorks": "Cómo funciona",
+    "talent": "Talento",
+    "companies": "Empresas",
+    "tournaments": "Torneos",
+    "networking": "Comunidad",
+    "news": "Noticias"
+  },
+  "hero": {
+    "eyebrow": "Comunidad tech en español · en Discord",
+    "title": "La comunidad tech donde <mark>te conocen</mark> antes de que salga la vacante",
+    "subtitle": "TechToJob junta en un mismo Discord a desarrolladores, perfiles de datos, ciber, diseño y a las empresas que contratan. Construyes, participas y la gente ve cómo trabajas. Cuando alguien busca a alguien, ya sabe quién eres.",
+    "note": "Sin coste para candidatos. Entras con tu cuenta de Discord.",
+    "contrast": {
+      "portal": "En un portal de empleo",
+      "portalText": "Mandas el CV. Compites con cientos. Nadie contesta.",
+      "here": "En TechToJob",
+      "hereText": "Estás dentro. Enseñas lo que haces. Te escriben a ti."
+    },
+    "mock": {
+      "serverName": "TechToJob",
+      "channels": [
+        "presentaciones",
+        "frontend",
+        "data",
+        "ofertas",
+        "torneo-2"
+      ],
+      "author": "Marta",
+      "role": "Frontend · junior",
+      "message": "Acabo de subir mi entrega del torneo. Si alguien la quiere revisar, el repo está en mi perfil.",
+      "reply": "Vista. Escríbeme por privado, estamos buscando a alguien de front.",
+      "replyAuthor": "Nerea · CTO"
+    },
+    "arrowLabel": "te escriben a ti"
+  },
+  "howItWorks": {
+    "eyebrow": "Cómo funciona",
+    "title": "De entrar al servidor a que te escriban, <mark>en cuatro pasos</mark>",
+    "subtitle": "Empezar cuesta un clic. Lo demás sale de participar, no de rellenar formularios.",
+    "steps": [
+      {
+        "title": "Entras al Discord",
+        "text": "Con tu cuenta de Discord y ya está. Sin registro de diez pantallas ni CV en PDF."
+      },
+      {
+        "title": "Te presentas y eliges tus canales",
+        "text": "Cuentas qué haces, qué nivel tienes y qué buscas. Sigues los canales de tu área."
+      },
+      {
+        "title": "Participas",
+        "text": "Resuelves una duda, entras a un torneo, enseñas lo que estás haciendo. La gente empieza a saber quién eres."
+      },
+      {
+        "title": "Sale una oportunidad",
+        "text": "Una empresa busca a alguien como tú, alguien te recomienda o te escriben directamente. No por un CV: porque te han visto trabajar."
+      }
+    ]
+  },
+  "talent": {
+    "eyebrow": "Ofrécete como talento",
+    "title": "Que te escriban <mark>a ti</mark>",
+    "text": "Publica tu perfil con tu stack, tu nivel y cuándo puedes empezar. Las empresas del servidor lo consultan cuando buscan a alguien y te escriben por mensaje directo.",
+    "points": [
+      {
+        "title": "Nadie te descarta antes de leerte",
+        "text": "No hay filtro automático. Tu perfil lo lee una persona, no un sistema que busca palabras clave."
+      },
+      {
+        "title": "No hace falta ser senior",
+        "text": "Junior, en cambio de carrera o con tu primer proyecto terminado. Cuenta lo que sabes hacer y lo que quieres aprender."
+      },
+      {
+        "title": "No te cuesta nada",
+        "text": "Publicar tu perfil y hablar con empresas no tiene coste. Ni ahora ni cuando te contraten."
+      }
+    ],
+    "cta": "Publicar mi perfil en el Discord",
+    "card": {
+      "label": "Ejemplo de perfil",
+      "name": "Marta R.",
+      "role": "Desarrolladora frontend",
+      "level": "Junior",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Tailwind"
+      ],
+      "availabilityLabel": "Disponibilidad",
+      "availability": "Inmediata · remoto o Madrid",
+      "lookingLabel": "Busca",
+      "looking": "Primer puesto en producto, equipo pequeño"
+    }
+  },
+  "companies": {
+    "eyebrow": "Publica como empresa",
+    "title": "Contrata a gente que <mark>ya has visto trabajar</mark>",
+    "text": "Publica lo que buscas y consulta perfiles con stack, nivel y disponibilidad. Lo que cambia es lo demás: aquí ves cómo esa persona responde dudas, qué entrega en un torneo y cómo trabaja con otros. Menos criba a ciegas. Más contexto real.",
+    "points": [
+      {
+        "title": "Publica tu oferta",
+        "text": "Un canal de empleo que lee toda la comunidad: varias áreas, varios niveles, España y Latinoamérica."
+      },
+      {
+        "title": "Consulta perfiles con contexto",
+        "text": "Filtra por área, nivel y disponibilidad. Y mira lo que esa persona ha hecho dentro del servidor."
+      },
+      {
+        "title": "Habla directamente",
+        "text": "Escribes a quien te interesa. Sin intermediarios, sin formularios que nadie lee."
+      }
+    ],
+    "cta": "Entrar como empresa",
+    "contactPrefix": "¿Prefieres hablar primero?",
+    "contactLink": "Escríbenos a contacto@techtojob.com"
+  },
+  "tournaments": {
+    "eyebrow": "Torneos",
+    "title": "Construye algo real y <mark>tenlo para enseñar</mark>",
+    "text": "Cada torneo es un reto con brief, fecha de entrega y jurado con criterios públicos. Lo que gana se usa de verdad. Esta misma web salió de uno.",
+    "benefits": [
+      {
+        "title": "Aprendes con un objetivo",
+        "text": "Un brief real, una fecha y una rúbrica. Se aprende más que con un tutorial."
+      },
+      {
+        "title": "Tienes algo que contar en una entrevista",
+        "text": "Un proyecto terminado, con repo público, que se puede abrir y ver."
+      },
+      {
+        "title": "Te ven",
+        "text": "Las empresas de la comunidad miran las entregas. El crédito del ganador queda visible."
+      }
+    ],
+    "listLabel": "Torneos de la comunidad",
+    "items": [
+      {
+        "number": "01",
+        "title": "Logo e identidad visual",
+        "meta": "Terminado · la marca que ves es la ganadora",
+        "status": "done"
+      },
+      {
+        "number": "02",
+        "title": "Landing page de TechToJob",
+        "meta": "En marcha · la entrega ganadora será la web oficial",
+        "status": "live"
+      },
+      {
+        "number": "03",
+        "title": "Siguiente reto",
+        "meta": "Se anuncia en el servidor",
+        "status": "next"
+      }
+    ],
+    "cta": "Ver los torneos en el Discord"
+  },
+  "networking": {
+    "eyebrow": "Networking",
+    "title": "Los buenos trabajos no se buscan. <mark>Te enteras.</mark>",
+    "text": "Canales por área con gente que trabaja en el sector. Dudas que se resuelven en minutos. Y ofertas que alguien comparte porque conoce a quien contrata. Este es el sitio donde te enteras.",
+    "areasLabel": "Canales por área",
+    "areas": [
+      {
+        "name": "Frontend",
+        "text": "React, Vue, Angular, CSS"
+      },
+      {
+        "name": "Backend",
+        "text": "Node, Python, Java, .NET, Go"
+      },
+      {
+        "name": "Datos",
+        "text": "Data engineering, analítica, BI"
+      },
+      {
+        "name": "Ciberseguridad",
+        "text": "Pentesting, blue team, cumplimiento"
+      },
+      {
+        "name": "Cloud y DevOps",
+        "text": "AWS, Azure, GCP, contenedores"
+      },
+      {
+        "name": "IA",
+        "text": "LLMs, ML, agentes"
+      },
+      {
+        "name": "Diseño",
+        "text": "Producto, UX, UI"
+      },
+      {
+        "name": "Móvil",
+        "text": "iOS, Android, multiplataforma"
+      }
+    ],
+    "extras": [
+      "Reuniones de comunidad para decidir juntos hacia dónde va el proyecto",
+      "Ofertas compartidas por gente que conoce la empresa por dentro",
+      "Gente de España y Latinoamérica, en español"
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Opiniones",
+    "title": "Lo que dice la gente que <mark>ya está dentro</mark>",
+    "subtitle": "Cada opinión enlaza con el perfil de la persona. Así se puede comprobar.",
+    "profileLink": "Ver perfil de {name} en LinkedIn",
+    "placeholderNotice": "Perfiles de ejemplo hasta recoger opiniones reales en el servidor.",
+    "items": [
+      {
+        "name": "Marta R.",
+        "role": "Frontend junior",
+        "quote": "Llevaba meses mandando CVs sin respuesta. Aquí me escribieron después de ver mi entrega del torneo."
+      },
+      {
+        "name": "Diego F.",
+        "role": "Data engineer",
+        "quote": "El canal de datos me ha resuelto más dudas en dos semanas que cualquier curso."
+      },
+      {
+        "name": "Nerea C.",
+        "role": "CTO en una startup",
+        "quote": "Vi cómo trabajaba antes de la entrevista. Eso no lo da ningún portal."
+      },
+      {
+        "name": "Iván P.",
+        "role": "Backend, cambio de carrera",
+        "quote": "No tenía experiencia laboral en tech y nadie me lo echó en cara. Me pidieron el repo."
+      },
+      {
+        "name": "Sofía L.",
+        "role": "Diseñadora de producto",
+        "quote": "Me enteré de mi oferta actual porque alguien del servidor conocía al equipo."
+      }
+    ]
+  },
+  "news": {
+    "eyebrow": "Noticias",
+    "title": "Novedades del proyecto <mark>y del sector</mark>",
+    "readMore": "Leer la noticia completa",
+    "items": [
+      {
+        "category": "Torneos",
+        "date": "2026-09-08",
+        "dateLabel": "8 sept 2026",
+        "title": "Abre el Torneo #2: la landing page de TechToJob",
+        "summary": "Brief público, rúbrica pública y una condición: la entrega ganadora se convierte en la web oficial del proyecto.",
+        "slug": "torneo-2-landing-page"
+      },
+      {
+        "category": "Comunidad",
+        "date": "2026-08-25",
+        "dateLabel": "25 ago 2026",
+        "title": "Ya hay logo: resultado del Torneo #1 de identidad visual",
+        "summary": "La comunidad eligió la identidad que ves en esta web. Paleta, tipografía y logo salen de ahí.",
+        "slug": "resultado-torneo-1-identidad"
+      },
+      {
+        "category": "Sector",
+        "date": "2026-08-18",
+        "dateLabel": "18 ago 2026",
+        "title": "Lo que piden de verdad las ofertas junior de frontend",
+        "summary": "Revisamos las ofertas compartidas en el servidor y contamos qué se repite, qué sobra y qué conviene tener en el repo.",
+        "slug": "ofertas-junior-frontend"
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Newsletter",
+    "title": "Las ofertas y los torneos de la semana, <mark>en tu correo</mark>",
+    "text": "Un correo cada lunes: las ofertas nuevas del servidor, los torneos que abren y dos o tres cosas del sector que merecen la pena. Nada más.",
+    "emailLabel": "Tu correo electrónico",
+    "emailPlaceholder": "tu@correo.com",
+    "submit": "Quiero el correo de los lunes",
+    "privacy": "Sin spam. Te das de baja en un clic.",
+    "pending": "La lista se abre con la web. Mientras tanto, las novedades salen primero en el Discord.",
+    "success": "Hecho. El próximo lunes te llega el primero.",
+    "error": "No se ha podido enviar. Prueba otra vez en un momento."
+  },
+  "closing": {
+    "title": "Si has leído hasta aquí, <mark>ya sabes</mark> si esto es para ti",
+    "text": "Entra, preséntate y mira lo que se está haciendo. Si no te encaja, te vas. Si te encaja, ya estás dentro antes de que salga la próxima vacante.",
+    "cta": "Entrar al Discord"
+  },
+  "footer": {
+    "tagline": "Comunidad de desarrolladores y empresas tech en español.",
+    "columns": {
+      "talent": {
+        "title": "Talento",
+        "links": [
+          {
+            "label": "Publicar tu perfil",
+            "anchor": "talento"
+          },
+          {
+            "label": "Cómo funciona",
+            "anchor": "como-funciona"
+          },
+          {
+            "label": "Torneos",
+            "anchor": "torneos"
+          }
+        ]
+      },
+      "companies": {
+        "title": "Empresas",
+        "links": [
+          {
+            "label": "Publicar una oferta",
+            "anchor": "empresas"
+          },
+          {
+            "label": "Consultar perfiles",
+            "anchor": "empresas"
+          },
+          {
+            "label": "Contacto",
+            "href": "mailto:contacto@techtojob.com"
+          }
+        ]
+      },
+      "community": {
+        "title": "Comunidad",
+        "links": [
+          {
+            "label": "Discord",
+            "href": "discord"
+          },
+          {
+            "label": "Canales por área",
+            "anchor": "comunidad"
+          },
+          {
+            "label": "Noticias",
+            "anchor": "noticias"
+          },
+          {
+            "label": "Newsletter",
+            "anchor": "newsletter"
+          }
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "links": [
+          {
+            "label": "Aviso legal",
+            "href": "/legal"
+          },
+          {
+            "label": "Privacidad",
+            "href": "/privacidad"
+          }
+        ]
+      }
+    },
+    "socialLabel": "Redes de TechToJob",
+    "social": {
+      "linkedin": "TechToJob en LinkedIn",
+      "x": "TechToJob en X",
+      "instagram": "TechToJob en Instagram",
+      "discord": "Servidor de Discord de TechToJob"
+    },
+    "copyright": "© {year} TechToJob. Hecho por la comunidad.",
+    "credit": "Landing diseñada en el Torneo #2 de la comunidad."
+  },
+  "legal": {
+    "noticeTitle": "Aviso legal",
+    "privacyTitle": "Política de privacidad",
+    "pending": "Este texto está pendiente de publicación. Si tienes cualquier duda sobre el proyecto o el tratamiento de tus datos, escribe a contacto@techtojob.com.",
+    "back": "Volver a la página principal"
+  }
+}
