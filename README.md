@@ -13,8 +13,19 @@ pnpm install --frozen-lockfile
 pnpm dev                        # http://localhost:3000
 pnpm dev --hostname 0.0.0.0     # probar desde un móvil en la misma red
 pnpm check                      # ESLint + comprobación estricta de tipos
-pnpm build                      # página estática, metadata, robots y sitemap
+pnpm build                      # export estático en out/ (página, metadata, robots y sitemap)
 ```
+
+## Despliegue en Cloudflare
+
+La web oficial es https://techtojob.com y se sirve como sitio estático desde Cloudflare Workers (`wrangler.jsonc` apunta a `out/`).
+
+- Comando de build: `pnpm build`
+- Comando de despliegue: `npx wrangler deploy`
+- Node: 24 (fijado en `.node-version`)
+- Cabeceras de seguridad y caché: `public/_headers`
+
+El dominio se define en `lib/site.ts`; `NEXT_PUBLIC_SITE_URL` lo sobrescribe si hace falta.
 
 ## Diseño, contenido e IA
 

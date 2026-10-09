@@ -12,8 +12,11 @@ export const site = {
   tiktok: "https://www.tiktok.com/@techtojob",
 } as const;
 
+// Dominio oficial. Se puede sobrescribir con NEXT_PUBLIC_SITE_URL (por ejemplo, en una preview).
+const productionUrl = "https://techtojob.com";
+
 const deploymentUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+  (process.env.NODE_ENV === "production" ? productionUrl : "http://localhost:3000");
 
 export const siteUrl = deploymentUrl.replace(/\/+$/, "");
