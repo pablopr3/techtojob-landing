@@ -13,7 +13,7 @@ import { site, siteUrl } from "@/lib/site";
 type Crumb = { label: string; href: string };
 
 /** Marco común de las páginas interiores: cabecera, contenido y pie. */
-export async function PageShell({ children }: Readonly<{ children: ReactNode }>) {
+export async function PageShell({ children, path }: Readonly<{ children: ReactNode; path?: string }>) {
   const t = await getTranslations("navigation");
 
   return (
@@ -24,7 +24,7 @@ export async function PageShell({ children }: Readonly<{ children: ReactNode }>)
       >
         {t("skipToContent")}
       </a>
-      <SiteHeader home={false} />
+      <SiteHeader home={false} current={path} />
       <main id="content">{children}</main>
       <SiteFooter />
       <ScrollExperience />

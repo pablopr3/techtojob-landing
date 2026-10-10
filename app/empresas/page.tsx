@@ -15,7 +15,7 @@ export default async function CompaniesPage() {
   const t = await getTranslations();
 
   return (
-    <PageShell>
+    <PageShell path={path}>
       <PageHero title={t("pages.companies.title")} lead={t("pages.companies.lead")} crumbs={[{ label: t("navigation.companies"), href: path }]} />
       <CompaniesSection />
       <ContentBlocks blocks={t.raw("pages.companies.blocks") as ContentBlock[]} />

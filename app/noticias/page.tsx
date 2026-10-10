@@ -15,7 +15,7 @@ export default async function NewsIndexPage() {
   const t = await getTranslations();
 
   return (
-    <PageShell>
+    <PageShell path={path}>
       <PageHero title={t("news.indexTitle")} lead={t("news.indexIntro")} crumbs={[{ label: t("navigation.news"), href: path }]} action={false} />
       <NewsSection index />
       <JoinCta />
