@@ -22,7 +22,7 @@ export const site = {
 export const owner = {
   name: "Pablo Pío Ramos",
   // NIF del titular. Mientras esté vacío no se muestra.
-  taxId: "51204872h",
+  taxId: "51204872H",
   address: "Calle El Calvario, n.º 6, Valle de Guerra, Tenerife (España)",
   email: site.email,
   legalUpdated: "2026-10-10",
