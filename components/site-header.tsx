@@ -6,12 +6,13 @@ import { DiscordMemberLink } from "@/components/discord-member-link";
 import { MobileMenu } from "@/components/mobile-menu";
 import { site } from "@/lib/site";
 
+// [clave, ancla en la portada, página propia si existe]
 const navigation = [
-  ["howItWorks", "#how-it-works"],
-  ["talent", "#talent"],
-  ["tournaments", "#tournaments"],
-  ["networking", "#networking"],
-  ["companies", "#companies"],
+  ["howItWorks", "#how-it-works", null],
+  ["talent", "#talent", "/talento"],
+  ["tournaments", "#tournaments", "/torneos"],
+  ["networking", "#networking", null],
+  ["companies", "#companies", "/empresas"],
 ] as const;
 
 type Translate = Awaited<ReturnType<typeof getTranslations>>;
@@ -19,10 +20,10 @@ type Translate = Awaited<ReturnType<typeof getTranslations>>;
 function Navigation({ t, home, mobile = false }: Readonly<{ t: Translate; home: boolean; mobile?: boolean }>) {
   return (
     <ul className={mobile ? "grid min-w-56 gap-1" : "flex items-center gap-6"}>
-      {navigation.map(([key, href]) => (
+      {navigation.map(([key, href, page]) => (
         <li key={key}>
           <a
-            href={home ? href : `/${href}`}
+            href={home ? href : page ?? `/${href}`}
             className={mobile
               ? "block rounded-xl px-4 py-3 text-base font-bold transition-colors hover:bg-white/8 hover:text-primary"
               : "text-sm font-bold transition-colors hover:text-primary"}

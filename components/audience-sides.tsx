@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { CommunityAvatar } from "@/components/community-avatar";
+import { NewsLink } from "@/components/news-link";
 
 const talentPoints = ["human", "junior", "free"] as const;
 const companyPoints = ["seeWork", "context", "active"] as const;
@@ -17,7 +18,7 @@ function MessageHeader({ name, meta }: Readonly<{ name: string; meta: string }>)
   );
 }
 
-export async function TalentSection() {
+export async function TalentSection({ more = false }: Readonly<{ more?: boolean }>) {
   const t = await getTranslations();
 
   return (
@@ -29,6 +30,7 @@ export async function TalentSection() {
           <ul className="mt-8 grid gap-3">
             {talentPoints.map((key) => <li key={key} className="flex items-center gap-3 text-sm font-bold"><span className="size-2.5 rounded-full bg-primary" />{t(`talent.points.${key}`)}</li>)}
           </ul>
+          {more && <NewsLink href="/talento" label={t("talent.more")} className="mt-6 text-white hover:text-primary transition-colors" />}
         </div>
 
         <div className="relative mx-auto w-full max-w-[43rem] pb-14 pt-8">
@@ -58,7 +60,7 @@ export async function TalentSection() {
   );
 }
 
-export async function CompaniesSection() {
+export async function CompaniesSection({ more = false }: Readonly<{ more?: boolean }>) {
   const t = await getTranslations();
 
   return (
@@ -87,6 +89,7 @@ export async function CompaniesSection() {
           <ul className="mt-8 grid gap-3">
             {companyPoints.map((key) => <li key={key} className="flex items-center gap-3 text-sm font-bold"><span className="size-2.5 rounded-full bg-ink" />{t(`companies.points.${key}`)}</li>)}
           </ul>
+          {more && <NewsLink href="/empresas" label={t("companies.more")} className="mt-6" />}
         </div>
       </div>
     </section>

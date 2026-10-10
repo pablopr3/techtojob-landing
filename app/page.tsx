@@ -31,9 +31,9 @@ export default async function HomePage() {
       <main id="content">
         <Hero />
         <HowItWorks />
-        <TalentSection />
-        <CompaniesSection />
-        <TournamentsSection />
+        <TalentSection more />
+        <CompaniesSection more />
+        <TournamentsSection more />
         <NetworkingSection />
         <TestimonialsSection />
         <NewsSection />

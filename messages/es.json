@@ -30,7 +30,9 @@
     "skipToContent": "Saltar al contenido",
     "home": "Inicio",
     "news": "Noticias",
-    "breadcrumb": "Ruta de navegación"
+    "breadcrumb": "Ruta de navegación",
+    "about": "Quiénes somos",
+    "more": "Saber más"
   },
   "hero": {
     "title": "No eres solo\nun número",
@@ -79,11 +81,11 @@
     "joinFull": "Entrar al Discord, +{count} miembros",
     "members": "+{count}",
     "areas": {
-      "development": "Development",
-      "support": "IT & Support",
-      "data": "Data & AI",
-      "security": "Cybersecurity",
-      "product": "Product & Design"
+      "development": "Desarrollo",
+      "support": "Soporte IT",
+      "data": "Datos e IA",
+      "security": "Ciberseguridad",
+      "product": "Producto y diseño"
     }
   },
   "howItWorks": {
@@ -142,7 +144,8 @@
       "human": "Una persona puede leer tu perfil completo",
       "junior": "No necesitas ser senior para participar",
       "free": "Publicar tu perfil no cuesta dinero"
-    }
+    },
+    "more": "Cómo encontrar tu primer trabajo tech"
   },
   "companies": {
     "title": "Contrata con contexto, no a ciegas",
@@ -163,7 +166,8 @@
       "seeWork": "Observa cómo trabaja antes de la entrevista",
       "context": "Menos automatización, más contexto humano",
       "active": "Encuentra perfiles que ya están participando"
-    }
+    },
+    "more": "Cómo participa una empresa"
   },
   "tournaments": {
     "title": "Rompe con el círculo",
@@ -173,7 +177,7 @@
     "winner": "Proyecto ganador",
     "winnerDescription": "Deja de hacer proyectos genéricos sin cliente. Súmate a un torneo y construye algo que se usa de verdad.",
     "processTitle": "Del brief al uso real",
-    "jury": "Participantes y jurado de la comunidad",
+    "jury": "Ranking de la comunidad y jurado en la final",
     "benefits": {
       "learn": "Ganar experiencia real",
       "showcase": "Crear trabajo demostrable",
@@ -184,7 +188,8 @@
       "building": "Construcción abierta",
       "review": "Feedback del jurado",
       "shipping": "Proyecto en uso"
-    }
+    },
+    "more": "Cómo funcionan los torneos"
   },
   "networking": {
     "title": "Ningún stack pesa más que conocer gente.",
@@ -321,7 +326,8 @@
       "talent": "Talento",
       "companies": "Empresas",
       "tournaments": "Torneos",
-      "news": "Noticias"
+      "news": "Noticias",
+      "about": "Quiénes somos"
     },
     "description": "Comunidad de desarrolladores y empresas tech en español.",
     "talent": "Talento",
@@ -337,44 +343,65 @@
     "items": [
       {
         "q": "¿Qué es TechToJob?",
-        "a": "TechToJob es una comunidad en español, organizada en Discord, donde desarrolladores y empresas tech se conocen participando: torneos, proyectos y conversaciones. La idea es que una empresa pueda ver cómo trabajas antes de que exista una vacante."
+        "a": "TechToJob es una comunidad en español, organizada en Discord, donde desarrolladores y empresas tech se conocen participando: torneos, proyectos y conversaciones. Empezó en agosto de 2026 y ya reúne a más de 2.000 personas entre Discord, LinkedIn y redes.",
+        "short": "Una comunidad donde las empresas te ven trabajar antes de contratarte."
       },
       {
         "q": "¿Cuesta dinero entrar?",
-        "a": "No. Entrar a la comunidad y publicar tu perfil es gratis. TechToJob no cobra a los candidatos por acceder a oportunidades de trabajo."
+        "a": "No. Entrar a la comunidad y publicar tu perfil es gratis. TechToJob no cobra a los candidatos por acceder a oportunidades de trabajo.",
+        "short": "Gratis."
       },
       {
         "q": "¿Necesito experiencia para participar?",
-        "a": "No. La comunidad está pensada sobre todo para quien busca su primer trabajo en programación o está cambiando de sector: estudiantes, perfiles junior y gente que aprende por su cuenta."
+        "a": "No. La comunidad está pensada sobre todo para quien busca su primer trabajo en programación o está cambiando de sector: estudiantes, perfiles junior y gente que aprende por su cuenta.",
+        "short": "No hace falta."
       },
       {
         "q": "¿Qué son los torneos?",
-        "a": "Son retos con un brief público, entregas reales y jurado de la comunidad. El resultado se usa de verdad: el logo de TechToJob y esta misma web salieron de un torneo."
+        "a": "Son retos abiertos a todo el mundo, con un brief público. La comunidad puntúa las entregas en un ranking general y un jurado decide la final. El resultado se usa de verdad: el logo de TechToJob y esta misma web salieron de un torneo.",
+        "short": "Retos reales, con jurado.",
+        "steps": [
+          "Brief público",
+          "Participación abierta",
+          "Ranking de la comunidad",
+          "Final con jurado"
+        ]
       },
       {
         "q": "¿Qué áreas del sector tech cubre?",
-        "a": "Hay canales de desarrollo, datos e inteligencia artificial, ciberseguridad, producto y diseño, infraestructura y DevOps, y soporte IT."
+        "a": "Hay canales de desarrollo, datos e inteligencia artificial, ciberseguridad, producto y diseño, infraestructura y DevOps, y soporte IT.",
+        "short": "Seis áreas.",
+        "chips": [
+          "Desarrollo",
+          "Datos e IA",
+          "Ciberseguridad",
+          "Producto y diseño",
+          "Infra y DevOps",
+          "Soporte IT"
+        ]
       },
       {
         "q": "¿Desde qué países se puede participar?",
-        "a": "Desde cualquiera. La comunidad funciona en español y reúne a personas de España y de Latinoamérica."
+        "a": "Desde cualquiera. La comunidad funciona en español y reúne a personas de España y de Latinoamérica.",
+        "short": "Desde cualquier país."
       },
       {
         "q": "¿Cómo participa una empresa?",
-        "a": "Entra al Discord, cuenta qué perfil busca y conoce a personas que ya están construyendo y colaborando en la comunidad. También puede escribir a contacto@techtojob.com."
+        "a": "Entra al Discord, cuenta qué perfil busca y conoce a personas que ya están construyendo y colaborando en la comunidad. También puede escribir a contacto@techtojob.com.",
+        "short": "Entra y cuenta qué buscas."
       },
       {
         "q": "¿TechToJob garantiza un empleo?",
-        "a": "No. TechToJob no promete contrataciones. Lo que ofrece es un lugar donde ganar experiencia demostrable y darte a conocer ante empresas y otros profesionales."
+        "a": "No. TechToJob no promete contrataciones. Lo que ofrece es un lugar donde ganar experiencia demostrable y darte a conocer ante empresas y otros profesionales.",
+        "short": "No. Y preferimos decírtelo."
       }
     ],
-    "channel": "#preguntas-frecuentes",
     "intro": "Lo que más nos preguntan antes de entrar.",
+    "channel": "#preguntas-frecuentes",
+    "pinned": "Fijado",
     "noteTitle": "¿Te queda alguna duda?",
     "note": "Pregúntala en el Discord. Siempre hay alguien que contesta.",
-    "noteButton": "Preguntar en Discord",
-    "replier": "TechToJob",
-    "pinned": "Fijado"
+    "noteButton": "Preguntar en Discord"
   },
   "pages": {
     "cta": {
@@ -384,19 +411,20 @@
     },
     "tournaments": {
       "metaTitle": "Torneos de programación y diseño",
-      "metaDescription": "Torneos de programación y diseño en español para ganar experiencia real: brief público, entregas reales y jurado de la comunidad.",
+      "metaDescription": "Torneos de programación y diseño en español, abiertos a todo el mundo: brief público, ranking de la comunidad y final con jurado.",
       "title": "Torneos de programación para ganar experiencia real",
-      "lead": "Retos abiertos con brief público, entregas reales y jurado de la comunidad. Lo que se construye se usa.",
+      "lead": "Retos abiertos a todo el mundo, con brief público, ranking de la comunidad y final con jurado. Lo que se construye se usa.",
       "blocks": [
         {
           "title": "Cómo funciona un torneo",
           "paragraphs": [
-            "Cada torneo empieza con un brief público: qué hay que construir, con qué requisitos y cómo se va a valorar. Cualquier persona de la comunidad puede apuntarse."
+            "Cada torneo empieza con un brief público: qué hay que construir, con qué requisitos y cómo se va a valorar. Puede participar cualquiera."
           ],
           "list": [
             "Brief público: el encargo y los criterios se conocen desde el primer día.",
-            "Construcción abierta: trabajas a la vista, preguntas dudas y recibes feedback.",
-            "Feedback del jurado: la comunidad revisa las entregas y elige ganador.",
+            "Participación abierta: te apuntas, construyes a la vista y recibes feedback.",
+            "Ranking de la comunidad: los miembros puntúan las entregas en un ranking general.",
+            "Final con jurado: un jurado valora las propuestas finalistas y elige ganador.",
             "Proyecto en uso: la propuesta ganadora se publica y se utiliza de verdad."
           ]
         },
@@ -417,15 +445,23 @@
       "faq": [
         {
           "q": "¿Quién puede participar en un torneo?",
-          "a": "Cualquier persona que esté en el Discord de TechToJob, tenga la experiencia que tenga."
+          "short": "Todo el mundo.",
+          "a": "Los torneos son abiertos: puede participar cualquier persona, tenga la experiencia que tenga."
         },
         {
           "q": "¿Hay que pagar para participar?",
-          "a": "No. Participar en los torneos es gratis."
+          "a": "No. Participar en los torneos es gratis.",
+          "short": "No, es gratis."
+        },
+        {
+          "q": "¿Quién decide el ganador?",
+          "short": "La comunidad y un jurado.",
+          "a": "Primero la comunidad puntúa las entregas en un ranking general. Después, un jurado valora las finalistas y elige la propuesta ganadora."
         },
         {
           "q": "¿Cuándo es el próximo torneo?",
-          "a": "Las fechas y las bases de cada torneo se anuncian en el Discord y en las noticias de esta web."
+          "a": "Las fechas y las bases de cada torneo se anuncian en el Discord y en las noticias de esta web.",
+          "short": "Se anuncia en Discord."
         }
       ]
     },
@@ -490,6 +526,111 @@
           ]
         }
       ]
+    },
+    "about": {
+      "metaTitle": "Quiénes somos",
+      "metaDescription": "TechToJob es una comunidad tech en español nacida en agosto de 2026: más de 2.000 personas, torneos abiertos y empresas que buscan talento.",
+      "title": "Una comunidad tech hecha por quienes buscan trabajo",
+      "lead": "TechToJob nació en agosto de 2026 para que encontrar trabajo en tecnología no dependa de enviar un CV y esperar.",
+      "factsTitle": "TechToJob en cifras",
+      "factsNote": "Datos de octubre de 2026.",
+      "facts": [
+        {
+          "value": "+2.000",
+          "label": "personas entre Discord, LinkedIn y redes"
+        },
+        {
+          "value": "2",
+          "label": "torneos celebrados: identidad visual y landing"
+        },
+        {
+          "value": "6",
+          "label": "áreas: desarrollo, datos e IA, ciberseguridad, producto y diseño, DevOps y soporte IT"
+        },
+        {
+          "value": "0 €",
+          "label": "cuesta entrar y publicar tu perfil"
+        }
+      ],
+      "intro": {
+        "title": "Qué es TechToJob",
+        "paragraphs": [
+          "Una comunidad en español, organizada en Discord, donde desarrolladores y empresas del sector tecnológico se conocen participando: torneos, proyectos y conversaciones.",
+          "Aquí no se sube un CV para esperar respuesta. Se entra, se construye a la vista de otros y se llega a la conversación con una empresa con algo real que enseñar."
+        ],
+        "quote": "Que una empresa vea cómo trabajas antes de que exista una vacante.",
+        "quoteLabel": "La idea"
+      },
+      "story": {
+        "title": "Cómo empezó",
+        "paragraphs": [
+          "TechToJob lo puso en marcha {founder} en agosto de 2026, después de comprobar que muchos perfiles que empiezan envían decenas de candidaturas sin recibir respuesta."
+        ],
+        "timeline": [
+          {
+            "date": "Agosto 2026",
+            "title": "Nace TechToJob",
+            "text": "Se abre el servidor de Discord y la idea se lanza en LinkedIn."
+          },
+          {
+            "date": "3 de septiembre",
+            "title": "Primer torneo: identidad visual",
+            "text": "Pablo Exposito gana y su propuesta se convierte en la marca de la comunidad."
+          },
+          {
+            "date": "25 de septiembre",
+            "title": "Segundo torneo: la landing",
+            "text": "Esteban Casadei gana y su web pasa a ser techtojob.com."
+          },
+          {
+            "date": "Octubre 2026",
+            "title": "Más de 2.000 personas",
+            "text": "La comunidad supera las 2.000 personas entre Discord, LinkedIn y redes, con miembros de España y Latinoamérica."
+          }
+        ]
+      },
+      "work": {
+        "title": "Qué hacemos",
+        "items": [
+          {
+            "title": "Torneos abiertos",
+            "text": "Puede participar todo el mundo. La comunidad puntúa las entregas en un ranking general y un jurado decide la final."
+          },
+          {
+            "title": "Perfiles públicos",
+            "text": "Cada persona publica su stack, su nivel y su disponibilidad para que las empresas sepan a quién tienen delante."
+          },
+          {
+            "title": "Espacios por área",
+            "text": "Canales para preguntar, pedir feedback y colaborar en desarrollo, datos e IA, ciberseguridad, producto y diseño, DevOps y soporte IT."
+          },
+          {
+            "title": "Contacto con empresas",
+            "text": "Las empresas que buscan talento entran, cuentan qué necesitan y hablan directamente con quien les encaja."
+          }
+        ]
+      },
+      "winners": {
+        "title": "Lo que salió de la comunidad",
+        "text": "Lo que se construye en un torneo se usa de verdad. Estas son las dos primeras pruebas.",
+        "label": "Ganador",
+        "link": "Leer la noticia",
+        "items": [
+          {
+            "tournament": "Torneo de identidad visual",
+            "name": "Pablo Exposito",
+            "what": "Su logo, su paleta y su tipografía son hoy la marca de TechToJob.",
+            "slug": "pablo-exposito-gana-torneo-identidad"
+          },
+          {
+            "tournament": "Torneo de landing page",
+            "name": "Esteban Casadei",
+            "what": "Diseñó y desarrolló la web que estás viendo.",
+            "slug": "esteban-casadei-gana-torneo-landing"
+          }
+        ]
+      },
+      "contact": "¿Quieres proponer un torneo o colaborar como empresa? Escríbenos a"
     }
   },
   "legal": {
@@ -518,5 +659,11 @@
     },
     "summaryTitle": "En pocas palabras",
     "indexTitle": "Contenido"
+  },
+  "notFound": {
+    "metaTitle": "Página no encontrada",
+    "title": "Esta página no existe",
+    "lead": "Puede que el enlace esté mal escrito o que la página se haya movido. Prueba desde aquí:",
+    "home": "Ir a la portada"
   }
 }

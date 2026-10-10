@@ -3,7 +3,8 @@ import { Sora } from "next/font/google";
 import { getLocale, getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
 import { JsonLd } from "@/components/json-ld";
-import { site, siteUrl } from "@/lib/site";
+import { about } from "@/lib/about";
+import { owner, site, siteUrl } from "@/lib/site";
 import "blobatar/motion.css";
 import "./global.css";
 
@@ -56,6 +57,10 @@ const organizationJsonLd = {
   name: site.name,
   url: siteUrl,
   logo: `${siteUrl}/images/brand-mark-512.png`,
+  description: about.description,
+  foundingDate: about.founded,
+  founder: { "@type": "Person", name: owner.name },
+  knowsLanguage: "es",
   email: site.email,
   sameAs: [site.discord, site.linkedin, site.x, site.instagram, site.tiktok],
 };

@@ -4,7 +4,7 @@ import { useSyncExternalStore, type ReactNode } from "react";
 import { AnimatedButtonLabel } from "@/components/animated-button-label";
 import { discordInviteCode, site } from "@/lib/site";
 
-let memberCount = 500;
+let memberCount = 700;
 let requested = false;
 const listeners = new Set<() => void>();
 
@@ -38,7 +38,7 @@ export function DiscordMemberLink({ children, className, label, countLabel, anim
   countLabel: string;
   animated?: boolean;
 }>) {
-  const count = useSyncExternalStore(subscribe, () => memberCount, () => 500);
+  const count = useSyncExternalStore(subscribe, () => memberCount, () => 700);
   const text = countLabel.replace("{count}", String(count));
 
   return (

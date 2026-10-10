@@ -136,6 +136,7 @@ export async function SiteFooter() {
   const links = [
     ["talent", "/talento"], ["companies", "/empresas"],
     ["tournaments", "/torneos"], ["news", "/noticias"],
+    ["about", "/quienes-somos"],
   ] as const;
   const networks: ReadonlyArray<{ key: SocialNetwork; label: string; href: string }> = [
     { key: "discord", label: "Discord", href: site.discord },

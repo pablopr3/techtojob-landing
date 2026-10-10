@@ -21,7 +21,7 @@ export function OwnerDetails() {
     <dl className="grid gap-x-6 gap-y-3 rounded-xl bg-ink/5 p-5 min-[36rem]:grid-cols-[auto_1fr]">
       {rows.map(([label, value]) => (
         <div key={label} className="contents">
-          <dt className="text-xs font-bold uppercase tracking-[.12em] text-ink/60 min-[36rem]:pt-1">{label}</dt>
+          <dt className="text-xs font-bold uppercase tracking-[.12em] text-ink/75 min-[36rem]:pt-1">{label}</dt>
           <dd className="font-bold">{value}</dd>
         </div>
       ))}
@@ -70,7 +70,7 @@ export async function LegalPage({ title, lead, path, summary, sections }: Readon
           </div>
 
           <div className="relative z-10 rounded-2xl bg-white p-[clamp(1.5rem,4vw,3.5rem)] text-ink shadow-card min-[64rem]:-mt-10">
-            <p className="text-xs font-bold uppercase tracking-[.14em] text-ink/60">{t("updated")} <time dateTime={owner.legalUpdated}>{owner.legalUpdatedLabel}</time></p>
+            <p className="text-xs font-bold uppercase tracking-[.14em] text-ink/75">{t("updated")} <time dateTime={owner.legalUpdated}>{owner.legalUpdatedLabel}</time></p>
             {sections.map((section, index) => (
               <section key={section.title} id={`s${index + 1}`} className="mt-10 scroll-mt-28 border-t border-ink/12 pt-10 first-of-type:mt-6 first-of-type:border-t-0 first-of-type:pt-0">
                 <h2 className="flex items-start gap-4 text-[clamp(1.4rem,2.4vw,1.9rem)] font-bold leading-tight tracking-[-.02em]">

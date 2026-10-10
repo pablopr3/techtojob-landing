@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { CommunityAvatar } from "@/components/community-avatar";
+import { NewsLink } from "@/components/news-link";
 
 const stages = ["brief", "building", "review", "shipping"] as const;
 const benefits = ["learn", "showcase", "visibility"] as const;
 
-export async function TournamentsSection() {
+export async function TournamentsSection({ more = false }: Readonly<{ more?: boolean }>) {
   const t = await getTranslations("tournaments");
 
   return (
@@ -16,6 +17,7 @@ export async function TournamentsSection() {
           <div>
             <p className="text-xl font-bold text-primary">{t("subtitle")}</p>
             <p className="mt-4 max-w-[54ch] leading-relaxed text-white/70">{t("lead")}</p>
+            {more && <NewsLink href="/torneos" label={t("more")} className="mt-4 text-white hover:text-primary transition-colors" />}
           </div>
         </header>
 
