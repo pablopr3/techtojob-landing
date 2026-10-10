@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import { getLocale, getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
+import { JsonLd } from "@/components/json-ld";
 import { site, siteUrl } from "@/lib/site";
 import "blobatar/motion.css";
 import "./global.css";
@@ -24,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(siteUrl),
-    icons: { icon: { url: "/images/brand-mark.svg", type: "image/svg+xml" } },
+    icons: { icon: [{ url: "/favicon.ico", sizes: "48x48" }, { url: "/images/brand-mark.svg", type: "image/svg+xml" }] },
     title: {
       default: t("title"),
       template: "%s | TechToJob",
@@ -55,7 +56,16 @@ const organizationJsonLd = {
   name: site.name,
   url: siteUrl,
   logo: `${siteUrl}/images/brand-mark-512.png`,
+  email: site.email,
   sameAs: [site.discord, site.linkedin, site.x, site.instagram, site.tiktok],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: siteUrl,
+  inLanguage: "es",
 };
 
 export default async function RootLayout({
@@ -66,10 +76,8 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${sora.variable} ${sora.className}`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={websiteJsonLd} />
         {children}
       </body>
     </html>

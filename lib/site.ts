@@ -3,13 +3,30 @@ export const author = {
   linkedin: "https://www.linkedin.com/in/esteban-casadei-087553357/",
 } as const;
 
+export const discordInviteCode = "pzCa8esFGA";
+
 export const site = {
   name: "TechToJob",
-  discord: "https://discord.gg/h9FFgKdkRd",
+  discord: `https://discord.gg/${discordInviteCode}`,
   linkedin: "https://www.linkedin.com/company/techtojob/",
   x: "https://x.com/techtojob",
   instagram: "https://www.instagram.com/techtojob",
   tiktok: "https://www.tiktok.com/@techtojob",
+  email: "contacto@techtojob.com",
+  // Dirección pública de la newsletter en Beehiiv, sin barra final
+  // (por ejemplo "https://techtojob.beehiiv.com"). Vacío = formulario sin conectar.
+  newsletter: "",
+} as const;
+
+// Titular de la web: aparece en /aviso-legal y /privacidad.
+export const owner = {
+  name: "Pablo Pío Ramos",
+  // NIF del titular. Mientras esté vacío no se muestra.
+  taxId: "51204872h",
+  address: "Calle El Calvario, n.º 6, Valle de Guerra, Tenerife (España)",
+  email: site.email,
+  legalUpdated: "2026-10-10",
+  legalUpdatedLabel: "10 de octubre de 2026",
 } as const;
 
 // Dominio oficial. Se puede sobrescribir con NEXT_PUBLIC_SITE_URL (por ejemplo, en una preview).

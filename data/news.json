@@ -16,11 +16,17 @@
           }
         ],
         "image": {
-          "src": "/images/og-cover.png",
+          "src": "/images/news-landing.webp",
           "alt": "TechToJob, comunidad de desarrolladores y empresas tech en español",
           "width": 1200,
           "height": 630
-        }
+        },
+        "slug": "esteban-casadei-gana-torneo-landing",
+        "body": [
+          "Esteban Casadei ha ganado el segundo torneo de TechToJob, el reto de diseñar y construir la landing oficial de la comunidad.",
+          "El torneo pedía una página completa a partir de un brief público: hero, cómo funciona, talento, empresas, torneos, networking, testimonios, noticias, newsletter, cierre y footer, construida sobre la identidad visual que salió del torneo anterior.",
+          "Su propuesta es la web que estás viendo ahora mismo en techtojob.com. El reconocimiento de autoría queda visible en la propia página."
+        ]
       },
       {
         "title": "Nuestro primer video ya está en TikTok e Instagram",
@@ -37,6 +43,11 @@
             "label": "Ver en Instagram",
             "url": "https://www.instagram.com/techtojob"
           }
+        ],
+        "slug": "primer-video-tiktok-instagram",
+        "body": [
+          "TechToJob ya tiene su primer vídeo publicado en TikTok e Instagram.",
+          "El vídeo anuncia el torneo que decidió la landing oficial de la comunidad y explica en qué consiste el reto. Puedes verlo en las cuentas oficiales, @techtojob en las dos redes."
         ]
       },
       {
@@ -50,8 +61,22 @@
             "label": "LinkedIn de Pablo",
             "url": "https://www.linkedin.com/in/pablo-exposito-23576a376/"
           }
+        ],
+        "slug": "pablo-exposito-gana-torneo-identidad",
+        "body": [
+          "Pablo Exposito (@novision_studio) ha ganado el primer torneo de TechToJob, el de identidad visual.",
+          "El reto consistía en proponer el logo, la paleta y la tipografía de la comunidad. La propuesta ganadora pasa a ser la identidad de TechToJob en la web, las redes y el servidor de Discord.",
+          "Sobre esa identidad se construyó después la landing, en el segundo torneo."
         ]
       }
-    ]
+    ],
+    "allNews": "Ver todas las noticias",
+    "readMore": "Leer la noticia",
+    "indexTitle": "Noticias de TechToJob",
+    "indexIntro": "Torneos, ganadores y novedades de la comunidad de desarrolladores y empresas tech en español.",
+    "back": "Todas las noticias",
+    "indexMetaTitle": "Noticias",
+    "linksTitle": "Enlaces",
+    "more": "Más noticias"
   }
 }

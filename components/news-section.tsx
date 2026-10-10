@@ -1,16 +1,20 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import type { NewsItem } from "@/lib/news";
+import Link from "next/link";
 import { NewsLink } from "@/components/news-link";
 
-export async function NewsSection() {
+export async function NewsSection({ index = false }: Readonly<{ index?: boolean }>) {
   const t = await getTranslations();
   const items = t.raw("news.items") as NewsItem[];
+  const Heading = index ? "h2" : "h3";
 
   return (
     <section className="bg-slate section-grid px-[var(--page-gutter)] py-[clamp(5rem,10vw,9rem)] text-white" aria-labelledby="news-heading">
       <div className="mx-auto max-w-[80rem]">
-        <h2 id="news-heading" className="font-bold tracking-[-.035em]">{t("news.title")}</h2>
+        {index
+          ? <h2 id="news-heading" className="sr-only">{t("news.title")}</h2>
+          : <h2 id="news-heading" className="font-bold tracking-[-.035em]">{t("news.title")}</h2>}
         <div className="mt-12 grid gap-6 min-[60rem]:grid-cols-[1.15fr_1fr] min-[60rem]:grid-rows-2">
           {items.map((item, index) => (
             <article key={item.title} className={`flex min-w-0 flex-col overflow-hidden rounded-2xl border border-ink/15 bg-white text-ink ${index === 0 ? "min-[60rem]:row-span-2" : ""}`}>
@@ -29,9 +33,10 @@ export async function NewsSection() {
                   <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold text-ink">{item.category}</span>
                   <time className="mr-full text-xs text-ink/75" dateTime={item.date}>{item.dateLabel}</time>
                 </div>
-                <h3 className={`mt-5 text-balance font-bold leading-tight tracking-[-.025em] ${index === 0 ? "text-[clamp(1.5rem,2.6vw,2.25rem)]" : "text-[clamp(1.25rem,2vw,1.65rem)]"}`}>{item.title}</h3>
+                <Heading className={`mt-5 text-balance font-bold leading-tight tracking-[-.025em] ${index === 0 ? "text-[clamp(1.5rem,2.6vw,2.25rem)]" : "text-[clamp(1.25rem,2vw,1.65rem)]"}`}><Link href={`/noticias/${item.slug}`} className="underline-offset-4 hover:underline">{item.title}</Link></Heading>
                 <p className="mt-4 max-w-[65ch] text-sm leading-relaxed text-ink/80">{item.summary}</p>
                 <ul className="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-5">
+                  <li className="min-w-0"><NewsLink href={`/noticias/${item.slug}`} label={t("news.readMore")} /></li>
                   {item.links.map((link) => (
                     <li key={link.url} className="min-w-0">
                       <NewsLink href={link.url} label={link.label} />
@@ -42,6 +47,7 @@ export async function NewsSection() {
             </article>
           ))}
         </div>
+        {!index && <NewsLink href="/noticias" label={t("news.allNews")} className="mt-8 text-white hover:text-primary transition-colors" />}
       </div>
     </section>
   );

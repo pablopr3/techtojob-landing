@@ -13,10 +13,10 @@
     "name": "TechToJob"
   },
   "metadata": {
-    "title": "TechToJob | Comunidad de desarrolladores y empresas tech",
-    "description": "Comunidad de desarrolladores y empresas tech en español donde participas, construyes y muestras cómo trabajas antes de que aparezca la próxima oportunidad.",
+    "title": "TechToJob | Trabajo tech y comunidad de programadores",
+    "description": "Comunidad en español para conseguir trabajo tech: torneos de programación, proyectos reales y contacto con empresas antes de que exista la vacante.",
     "socialTitle": "Comunidad tech donde tu trabajo habla | TechToJob",
-    "socialDescription": "Participa, construye y conecta con desarrolladores y empresas tech en español antes de que aparezca la vacante.",
+    "socialDescription": "Participa en torneos, construye proyectos reales y conecta con empresas tech en español antes de que aparezca la vacante.",
     "imageAlt": "TechToJob, comunidad de desarrolladores y empresas tech en español"
   },
   "navigation": {
@@ -27,7 +27,10 @@
     "companies": "Empresas",
     "community": "Comunidad",
     "menu": "Abrir navegación",
-    "skipToContent": "Saltar al contenido"
+    "skipToContent": "Saltar al contenido",
+    "home": "Inicio",
+    "news": "Noticias",
+    "breadcrumb": "Ruta de navegación"
   },
   "hero": {
     "title": "No eres solo\nun número",
@@ -50,7 +53,8 @@
       "reply": "Voy. Te dejo feedback en el hilo.",
       "status": "La comunidad está construyendo ahora",
       "pullRequest": "Pull request #24"
-    }
+    },
+    "eyebrow": "Comunidad para conseguir trabajo tech en español"
   },
   "profile": {
     "name": "Esteban C.",
@@ -312,12 +316,12 @@
   },
   "footer": {
     "authorCredit": "Sitio web realizado por {name}",
-    "explore": "Talento y Empresas",
+    "explore": "Explorar",
     "links": {
-      "profiles": "Perfiles",
+      "talent": "Talento",
+      "companies": "Empresas",
       "tournaments": "Torneos",
-      "search": "Publicar búsqueda",
-      "networking": "Networking"
+      "news": "Noticias"
     },
     "description": "Comunidad de desarrolladores y empresas tech en español.",
     "talent": "Talento",
@@ -326,26 +330,193 @@
     "legal": "Legal",
     "privacy": "Privacidad",
     "legalNotice": "Aviso legal",
-    "modal": {
-      "close": "Cerrar",
-      "notice": "Contenido de demostración. Este texto es provisional y no constituye el documento legal definitivo.",
-      "privacy": {
-        "description": "Aquí se publicará la información sobre privacidad de TechToJob cuando esté disponible.",
-        "sections": [
-          { "title": "Responsable y contacto", "description": "Información pendiente de completar con los datos y el contacto del responsable." },
-          { "title": "Datos y finalidad", "description": "Espacio reservado para explicar qué datos se tratan, para qué se utilizan y durante cuánto tiempo se conservan." },
-          { "title": "Tus derechos", "description": "Espacio reservado para indicar cómo realizar consultas y ejercer los derechos aplicables." }
-        ]
-      },
-      "legalNotice": {
-        "description": "Aquí se publicará el aviso legal de TechToJob cuando esté disponible.",
-        "sections": [
-          { "title": "Identificación", "description": "Información pendiente de completar con los datos del titular de la web." },
-          { "title": "Condiciones de uso", "description": "Espacio reservado para las condiciones de uso de la web y sus contenidos." },
-          { "title": "Contenido y enlaces", "description": "Espacio reservado para la información relativa a los recursos publicados y los enlaces externos." }
-        ]
-      }
-    },
     "rights": "TechToJob"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "¿Qué es TechToJob?",
+        "a": "TechToJob es una comunidad en español, organizada en Discord, donde desarrolladores y empresas tech se conocen participando: torneos, proyectos y conversaciones. La idea es que una empresa pueda ver cómo trabajas antes de que exista una vacante."
+      },
+      {
+        "q": "¿Cuesta dinero entrar?",
+        "a": "No. Entrar a la comunidad y publicar tu perfil es gratis. TechToJob no cobra a los candidatos por acceder a oportunidades de trabajo."
+      },
+      {
+        "q": "¿Necesito experiencia para participar?",
+        "a": "No. La comunidad está pensada sobre todo para quien busca su primer trabajo en programación o está cambiando de sector: estudiantes, perfiles junior y gente que aprende por su cuenta."
+      },
+      {
+        "q": "¿Qué son los torneos?",
+        "a": "Son retos con un brief público, entregas reales y jurado de la comunidad. El resultado se usa de verdad: el logo de TechToJob y esta misma web salieron de un torneo."
+      },
+      {
+        "q": "¿Qué áreas del sector tech cubre?",
+        "a": "Hay canales de desarrollo, datos e inteligencia artificial, ciberseguridad, producto y diseño, infraestructura y DevOps, y soporte IT."
+      },
+      {
+        "q": "¿Desde qué países se puede participar?",
+        "a": "Desde cualquiera. La comunidad funciona en español y reúne a personas de España y de Latinoamérica."
+      },
+      {
+        "q": "¿Cómo participa una empresa?",
+        "a": "Entra al Discord, cuenta qué perfil busca y conoce a personas que ya están construyendo y colaborando en la comunidad. También puede escribir a contacto@techtojob.com."
+      },
+      {
+        "q": "¿TechToJob garantiza un empleo?",
+        "a": "No. TechToJob no promete contrataciones. Lo que ofrece es un lugar donde ganar experiencia demostrable y darte a conocer ante empresas y otros profesionales."
+      }
+    ],
+    "channel": "#preguntas-frecuentes",
+    "intro": "Lo que más nos preguntan antes de entrar.",
+    "noteTitle": "¿Te queda alguna duda?",
+    "note": "Pregúntala en el Discord. Siempre hay alguien que contesta.",
+    "noteButton": "Preguntar en Discord",
+    "replier": "TechToJob",
+    "pinned": "Fijado"
+  },
+  "pages": {
+    "cta": {
+      "title": "Entra y preséntate",
+      "description": "La comunidad está en Discord. Entrar es gratis y te lleva menos de un minuto.",
+      "button": "Entrar al Discord"
+    },
+    "tournaments": {
+      "metaTitle": "Torneos de programación y diseño",
+      "metaDescription": "Torneos de programación y diseño en español para ganar experiencia real: brief público, entregas reales y jurado de la comunidad.",
+      "title": "Torneos de programación para ganar experiencia real",
+      "lead": "Retos abiertos con brief público, entregas reales y jurado de la comunidad. Lo que se construye se usa.",
+      "blocks": [
+        {
+          "title": "Cómo funciona un torneo",
+          "paragraphs": [
+            "Cada torneo empieza con un brief público: qué hay que construir, con qué requisitos y cómo se va a valorar. Cualquier persona de la comunidad puede apuntarse."
+          ],
+          "list": [
+            "Brief público: el encargo y los criterios se conocen desde el primer día.",
+            "Construcción abierta: trabajas a la vista, preguntas dudas y recibes feedback.",
+            "Feedback del jurado: la comunidad revisa las entregas y elige ganador.",
+            "Proyecto en uso: la propuesta ganadora se publica y se utiliza de verdad."
+          ]
+        },
+        {
+          "title": "Torneos celebrados",
+          "paragraphs": [
+            "Torneo n.º 1, identidad visual: logo, paleta y tipografía de TechToJob. Ganó Pablo Exposito (@novision_studio) y su propuesta es hoy la marca de la comunidad.",
+            "Torneo n.º 2, landing page: diseño y desarrollo de la web oficial sobre esa identidad. Ganó Esteban Casadei y su propuesta es la página que estás viendo."
+          ]
+        },
+        {
+          "title": "Qué te llevas",
+          "paragraphs": [
+            "Participar ya te deja un proyecto con cliente real que enseñar y feedback sobre cómo trabajas. Quien gana recibe además crédito permanente en la web y un rol destacado dentro de la comunidad."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Quién puede participar en un torneo?",
+          "a": "Cualquier persona que esté en el Discord de TechToJob, tenga la experiencia que tenga."
+        },
+        {
+          "q": "¿Hay que pagar para participar?",
+          "a": "No. Participar en los torneos es gratis."
+        },
+        {
+          "q": "¿Cuándo es el próximo torneo?",
+          "a": "Las fechas y las bases de cada torneo se anuncian en el Discord y en las noticias de esta web."
+        }
+      ]
+    },
+    "talent": {
+      "metaTitle": "Encuentra tu primer trabajo tech",
+      "metaDescription": "Consigue tu primer trabajo en programación enseñando cómo trabajas: publica tu perfil, participa en torneos y conoce empresas tech.",
+      "title": "Tu primer trabajo tech empieza enseñando cómo trabajas",
+      "lead": "Publica tu perfil, construye delante de otros y deja que las empresas te conozcan antes de la entrevista.",
+      "blocks": [
+        {
+          "title": "Para quién es",
+          "paragraphs": [
+            "Para quien busca trabajo en programación y se cansa de enviar candidaturas sin respuesta. Sobre todo si estás empezando: estudiantes, perfiles junior, gente que viene de otro sector o que aprende por su cuenta.",
+            "No hace falta ser senior ni tener un portfolio perfecto. Hace falta participar."
+          ]
+        },
+        {
+          "title": "Qué puedes hacer dentro",
+          "paragraphs": [],
+          "list": [
+            "Publicar tu perfil con tu stack, tu nivel y tu disponibilidad.",
+            "Apuntarte a torneos y terminar con un proyecto real que enseñar.",
+            "Pedir feedback sobre tu código, tu portfolio o tu CV.",
+            "Hablar con gente de tu área: desarrollo, datos e IA, ciberseguridad, producto y diseño, DevOps o soporte IT.",
+            "Conocer a empresas que buscan talento dentro de la comunidad."
+          ]
+        },
+        {
+          "title": "Lo que no es",
+          "paragraphs": [
+            "TechToJob no es un portal donde subir un CV y esperar, y no garantiza un empleo. Es una comunidad: lo que recibes depende de lo que participes."
+          ]
+        }
+      ]
+    },
+    "companies": {
+      "metaTitle": "Contrata talento tech junior",
+      "metaDescription": "Encuentra perfiles tech que ya has visto trabajar: una comunidad en español con torneos, proyectos reales y personas activas.",
+      "title": "Contrata talento tech que ya has visto trabajar",
+      "lead": "Conoce a perfiles que participan, construyen y colaboran en la comunidad antes de abrir un proceso.",
+      "blocks": [
+        {
+          "title": "Qué encuentra tu empresa",
+          "paragraphs": [
+            "Personas con proyectos que puedes revisar, entregas en torneos con un brief real y conversaciones públicas que enseñan cómo razonan y cómo colaboran. Ese contexto no cabe en un CV."
+          ]
+        },
+        {
+          "title": "Cómo participar",
+          "paragraphs": [],
+          "list": [
+            "Entra al Discord y preséntate como empresa.",
+            "Cuenta qué perfil buscas y en qué condiciones.",
+            "Revisa perfiles, proyectos y entregas de torneos.",
+            "Habla directamente con las personas que te encajen."
+          ]
+        },
+        {
+          "title": "Patrocinar un torneo",
+          "paragraphs": [
+            "Si tu empresa quiere proponer un reto o apoyar un torneo con premios, escríbenos a contacto@techtojob.com y lo vemos."
+          ]
+        }
+      ]
+    }
+  },
+  "legal": {
+    "updated": "Última actualización:",
+    "privacy": {
+      "metaTitle": "Política de privacidad",
+      "metaDescription": "Qué datos personales trata la web de TechToJob, para qué, con qué proveedores y cómo ejercer tus derechos.",
+      "title": "Política de privacidad",
+      "lead": "Qué datos tratamos cuando visitas techtojob.com, para qué los usamos y qué puedes hacer al respecto.",
+      "summary": [
+        "No hay registro de usuarios ni cookies de publicidad.",
+        "No vendemos tus datos a nadie.",
+        "Para cualquier consulta o para ejercer tus derechos, escríbenos."
+      ]
+    },
+    "notice": {
+      "metaTitle": "Aviso legal",
+      "metaDescription": "Titular, condiciones de uso, propiedad intelectual y responsabilidad de la web techtojob.com.",
+      "title": "Aviso legal",
+      "lead": "Quién está detrás de techtojob.com y en qué condiciones se ofrece esta web.",
+      "summary": [
+        "Web informativa y gratuita, sin registro.",
+        "La comunidad funciona en Discord, con sus propias normas.",
+        "TechToJob no garantiza un empleo ni una contratación."
+      ]
+    },
+    "summaryTitle": "En pocas palabras",
+    "indexTitle": "Contenido"
   }
 }

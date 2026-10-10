@@ -2,7 +2,7 @@
 
 import { useSyncExternalStore, type ReactNode } from "react";
 import { AnimatedButtonLabel } from "@/components/animated-button-label";
-import { site } from "@/lib/site";
+import { discordInviteCode, site } from "@/lib/site";
 
 let memberCount = 500;
 let requested = false;
@@ -12,7 +12,7 @@ function subscribe(listener: () => void) {
   listeners.add(listener);
   if (!requested) {
     requested = true;
-    void fetch("https://discord.com/api/v10/invites/h9FFgKdkRd?with_counts=true", {
+    void fetch(`https://discord.com/api/v10/invites/${discordInviteCode}?with_counts=true`, {
       signal: AbortSignal.timeout(8000),
       credentials: "omit",
     }).then(async (response) => {

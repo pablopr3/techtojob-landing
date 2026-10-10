@@ -39,13 +39,26 @@ La sección de cierre muestra un muro interactivo y arrastrable donde cada Bloba
 
 Hoy los nombres son editoriales (`messages/es.json`). La implementación prevista: al entrar al Discord se preguntará a cada persona si quiere aparecer en la web, explicando qué se muestra (solo su nombre, sin otros datos). Un bot de Discord, u otro mecanismo equivalente, recogerá los nombres de quienes acepten y el muro pasará a alimentarse de esa lista real sustituyendo el contenido de demostración, sin cambios de diseño.
 
+## Páginas
+
+| Ruta | Contenido |
+| --- | --- |
+| `/` | Landing |
+| `/talento`, `/empresas`, `/torneos` | Páginas por tema; textos en `messages/es.json` → `pages` |
+| `/noticias` y `/noticias/<slug>` | Listado y una página por noticia, generadas desde `data/news.json` |
+| `/privacidad`, `/aviso-legal` | Textos legales; datos del titular en `lib/site.ts` → `owner` |
+
+Las preguntas frecuentes de la portada están en `messages/es.json` → `faq`. El sitemap (`app/sitemap.ts`) lista todas las rutas; al añadir una página nueva hay que añadirla ahí.
+
+Para conectar la newsletter, pon la dirección pública de Beehiiv en `lib/site.ts` → `site.newsletter`.
+
 ## Editar las noticias
 
 Todo el contenido de esta sección está en `data/news.json`, bajo la clave `es`. No hace falta editar componentes ni `messages/es.json`: `next-intl` incorpora este JSON durante la generación estática. Las tres entradas actuales y `og-cover.png` son ejemplos aprobados.
 
 - `title`: título de la sección.
 - `items`: las tres noticias en orden. La primera es la principal, ocupa dos filas a la izquierda en escritorio y aparece primero en móvil. Las otras dos van a la derecha; en móvil se apilan en el mismo orden.
-- Cada noticia incluye `title`, `category`, `summary`, `date` (formato `YYYY-MM-DD`), `dateLabel` (fecha visible) y `links` (uno o varios objetos con `label` y una URL real en `url`). Actualiza ambas fechas conjuntamente.
+- Cada noticia incluye `slug` (la dirección de su página: minúsculas, sin tildes y con guiones; no lo cambies una vez publicada), `body` (lista de párrafos de la página de la noticia), `title`, `category`, `summary`, `date` (formato `YYYY-MM-DD`), `dateLabel` (fecha visible) y `links` (uno o varios objetos con `label` y una URL real en `url`). Actualiza ambas fechas conjuntamente.
 - La primera noticia incluye `image`: `src`, `alt`, `width` y `height`. Usa una imagen local dentro de `public/images`, escribe su ruta pública (por ejemplo, `/images/og-cover.png`) y sus dimensiones reales. Las otras dos tarjetas no muestran imagen.
 
 ## Recursos y licencias

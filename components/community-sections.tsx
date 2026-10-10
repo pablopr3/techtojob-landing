@@ -5,7 +5,7 @@ import { CommunityAvatar } from "@/components/community-avatar";
 import { LazyCommunityWall } from "@/components/lazy-community-wall";
 import { author, site } from "@/lib/site";
 import { NewsletterAvatar } from "@/components/newsletter-avatar";
-import { LegalModal } from "@/components/legal-modal";
+import Link from "next/link";
 import { NewsLink } from "@/components/news-link";
 import { SocialIcon, type SocialNetwork } from "@/components/social-icon";
 
@@ -92,7 +92,7 @@ export async function NewsletterSection() {
       <div className="mx-auto grid max-w-[80rem] gap-10 min-[58rem]:grid-cols-[1fr_1fr] min-[58rem]:items-end">
         <div><h2 id="newsletter-heading" className="max-w-[13ch] text-balance font-bold tracking-[-.035em]">{t("title")}</h2><p className="mt-5 max-w-[52ch] text-lg leading-relaxed text-ink/85">{t("description")}</p></div>
         <NewsletterAvatar>
-          <form action="#newsletter" className="relative rounded-2xl bg-ink p-5 text-white shadow-card min-[36rem]:p-7">
+          <form action={site.newsletter ? `${site.newsletter}/subscribe` : "#newsletter"} method="get" className="relative rounded-2xl bg-ink p-5 text-white shadow-card min-[36rem]:p-7">
             <label className="text-sm font-bold" htmlFor="newsletter-email">{t("label")}</label>
             <div className="mt-3 grid gap-3 min-[36rem]:grid-cols-[1fr_auto]">
               <input id="newsletter-email" name="email" type="email" autoComplete="email" required placeholder={t("placeholder")} className="min-h-13 min-w-0 rounded-xl bg-white px-4 text-base text-ink placeholder:text-ink/50" />
@@ -134,8 +134,8 @@ export async function ClosingSection() {
 export async function SiteFooter() {
   const t = await getTranslations("footer");
   const links = [
-    ["profiles", "#talent"], ["tournaments", "#tournaments"],
-    ["search", "#companies"], ["networking", "#networking"],
+    ["talent", "/talento"], ["companies", "/empresas"],
+    ["tournaments", "/torneos"], ["news", "/noticias"],
   ] as const;
   const networks: ReadonlyArray<{ key: SocialNetwork; label: string; href: string }> = [
     { key: "discord", label: "Discord", href: site.discord },
@@ -150,7 +150,7 @@ export async function SiteFooter() {
       <div className="mx-auto max-w-[80rem] border-t border-primary/40 pt-12">
         <div className="grid gap-14 min-[60rem]:grid-cols-[1fr_1.1fr] min-[60rem]:gap-24">
           <div className="flex items-center">
-            <Image src="/images/brand-logo.svg" alt="TechToJob" width={140} height={78} className="h-auto w-full max-w-[28rem]" />
+            <Link href="/" className="block w-full max-w-[28rem]"><Image src="/images/brand-logo.svg" alt="TechToJob" width={140} height={78} className="h-auto w-full" /></Link>
           </div>
           <div className="grid gap-x-10 gap-y-9 min-[36rem]:grid-cols-2">
             <nav aria-labelledby="footer-explore-heading">
@@ -162,8 +162,8 @@ export async function SiteFooter() {
             <div>
               <h2 className="text-base font-bold text-primary">{t("legal")}</h2>
               <ul className="mt-4 grid gap-1">
-                {(["privacy", "legalNotice"] as const).map((key) => (
-                  <li key={key}><LegalModal title={t(key)} notice={t("modal.notice")} closeLabel={t("modal.close")} description={t(`modal.${key}.description`)} sections={t.raw(`modal.${key}.sections`) as { title: string; description: string }[]} /></li>
+                {([["privacy", "/privacidad"], ["legalNotice", "/aviso-legal"]] as const).map(([key, href]) => (
+                  <li key={key}><NewsLink href={href} label={t(key)} className="text-white/85 hover:text-primary transition-colors" /></li>
                 ))}
               </ul>
             </div>
