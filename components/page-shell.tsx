@@ -49,18 +49,18 @@ export async function PageHero({ title, lead, crumbs, meta, action = true, schem
     <section className="relative isolate -mt-[4.25rem] overflow-hidden px-[var(--page-gutter)] pb-[clamp(3.5rem,7vw,6rem)] pt-[calc(4.25rem+clamp(3rem,7vw,6rem))] [background:radial-gradient(circle_at_78%_24%,rgba(132,192,191,.18),transparent_31rem),linear-gradient(180deg,#2f3436_0%,#292e30_100%)] min-[50rem]:-mt-[5.25rem] min-[50rem]:pt-[calc(5.25rem+clamp(3rem,7vw,6rem))]">
       <div className="mx-auto flex max-w-[80rem] flex-col items-start">
         <nav aria-label={t("navigation.breadcrumb")}>
-          <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-bold text-white/60">
+          <ol className="flex flex-wrap items-center gap-x-2 text-sm font-bold text-white/60">
             {trail.map((crumb, index) => (
               <li key={crumb.href} className="flex items-center gap-2">
                 {index > 0 && <span aria-hidden="true">/</span>}
                 {index === trail.length - 1
-                  ? <span aria-current="page" className="text-primary">{crumb.label}</span>
-                  : <Link href={crumb.href} className="transition-colors hover:text-primary">{crumb.label}</Link>}
+                  ? <span aria-current="page" className="inline-flex min-h-11 items-center text-primary">{crumb.label}</span>
+                  : <Link href={crumb.href} className="inline-flex min-h-11 min-w-11 items-center transition-colors hover:text-primary">{crumb.label}</Link>}
               </li>
             ))}
           </ol>
         </nav>
-        <h1 className="mt-6 max-w-[18ch] text-balance text-[clamp(2.5rem,6vw,4.75rem)] font-bold tracking-[-.04em]">{title}</h1>
+        <h1 className="mt-3 max-w-[18ch] text-balance text-[clamp(2.5rem,6vw,4.75rem)] font-bold tracking-[-.04em]">{title}</h1>
         {meta}
         {lead && <p className="mt-6 max-w-[58ch] text-lg leading-relaxed text-white/75">{lead}</p>}
         {action && (

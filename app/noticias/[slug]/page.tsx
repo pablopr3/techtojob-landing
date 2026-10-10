@@ -23,7 +23,9 @@ const findItem = (slug: string) => news.es.items.find((item) => item.slug === sl
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = findItem((await params).slug);
   if (!item) return {};
-  return pageMetadata({ title: item.title, description: item.summary, path: `/noticias/${item.slug}`, type: "article" });
+  const metadata = pageMetadata({ title: item.title, description: item.summary, path: `/noticias/${item.slug}`, type: "article" });
+  // Los titulares largos van sin el sufijo "| TechToJob" para que Google no los corte.
+  return item.title.length > 48 ? { ...metadata, title: { absolute: item.title } } : metadata;
 }
 
 export default async function NewsArticlePage({ params }: Props) {
