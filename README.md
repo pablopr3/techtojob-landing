@@ -31,7 +31,7 @@ El dominio se define en `lib/site.ts`; `NEXT_PUBLIC_SITE_URL` lo sobrescribe si 
 
 El diseño visual es propio, la IA se utilizó únicamente para el pasaje a código y algunas decisiones de diseño.
 
-Los testimonios, noticias, conversaciones y perfiles son contenido editorial provisional de demostración para esta entrega del torneo; cada testimonio admite fotografía y enlace verificable sin rediseñar componentes. No se muestran empleos garantizados ni métricas inventadas. La newsletter es un formulario estático que no envía datos.
+Los testimonios, noticias, conversaciones y perfiles son contenido editorial provisional de demostración para esta entrega del torneo; cada testimonio admite fotografía y enlace verificable sin rediseñar componentes. No se muestran empleos garantizados ni métricas inventadas. La newsletter es un formulario estático que no envía datos por ahora.
 
 ## El muro de la comunidad
 
@@ -72,3 +72,5 @@ Todo el contenido de esta sección está en `data/news.json`, bajo la clave `es`
 | `og-cover.png` | Generada con IA a partir de la marca oficial | Mismas condiciones que el resto de la marca. |
 
 No se utilizan fotografías externas ni recursos remotos durante la carga.
+
+
